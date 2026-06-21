@@ -7,11 +7,11 @@ import { cn } from '../lib/utils';
 
 const navLinks = [
   { path: '/', label: 'Home' },
-  { path: '/council-framework', label: 'Council Framework' },
+  { path: '/council-framework', label: 'Council' },
   { path: '/team', label: 'Team' },
   { path: '/events', label: 'Events' },
   { path: '/gallery', label: 'Gallery' },
-  { path: '/connect', label: 'Connect With Us' },
+  { path: '/connect', label: 'Connect' },
 ];
 
 export default function Navbar() {
@@ -33,12 +33,12 @@ export default function Navbar() {
             <img
               src="/image.png"
               alt="VVIT Logo"
-              className="w-[150px] h-[150px] rounded-lg object-contain group-hover:scale-105 transition-transform"
+              className="w-[120px] h-[120px] rounded-lg object-contain group-hover:scale-105 transition-transform"
             />
           </Link>
 
-          {/* Center - Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Center - Navigation (always visible) */}
+          <div className="flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -62,7 +62,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right - Theme Toggle + VVISC Logo */}
+          {/* Right - Theme Toggle */}
           <div className="flex items-center gap-3">
             <button
               onClick={toggleTheme}
@@ -73,30 +73,6 @@ export default function Navbar() {
                 <Sun className="w-5 h-5 text-dark-accent-secondary" />
               ) : (
                 <Moon className="w-5 h-5 text-light-accent-secondary" />
-              )}
-            </button>
-
-            <motion.div
-              animate={{ y: [0, -4, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="hidden sm:flex items-center gap-2"
-            >
-              <img
-                src="/WhatsApp_Image_2026-06-19_at_9.47.31_PM.jpeg"
-                alt="VVISC Logo"
-                className="w-[100px] h-[100px] rounded-full object-cover shadow-lg shadow-dark-accent/30"
-              />
-            </motion.div>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
-            >
-              {mobileOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
               )}
             </button>
           </div>

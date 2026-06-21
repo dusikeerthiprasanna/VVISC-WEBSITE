@@ -2,9 +2,9 @@ export default function LogoWatermark({ className = '' }: { className?: string }
   return (
     <div className={`pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden ${className}`}>
       <img
-        src="/image_transparent.png"
+        src="/vvisc_logo_transparent.png"
         alt=""
-        className="w-[500px] h-[500px] sm:w-[600px] sm:h-[600px] lg:w-[700px] lg:h-[700px] object-contain opacity-[0.08] dark:opacity-[0.06] dark:invert select-none"
+        className="w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] object-contain opacity-75 select-none"
         draggable={false}
       />
     </div>
