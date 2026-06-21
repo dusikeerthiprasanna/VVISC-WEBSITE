@@ -62,7 +62,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right - Theme Toggle */}
+          {/* Right - Theme Toggle + VVISC Logo */}
           <div className="flex items-center gap-3">
             <button
               onClick={toggleTheme}
@@ -75,6 +75,12 @@ export default function Navbar() {
                 <Moon className="w-5 h-5 text-light-accent-secondary" />
               )}
             </button>
+
+            <img
+              src="/vvisc_logo_transparent.png"
+              alt="VVISC Logo"
+              className="w-[100px] h-[100px] object-contain"
+            />
           </div>
         </div>
       </div>

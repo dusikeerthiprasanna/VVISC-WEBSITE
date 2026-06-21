@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Monitor, ChevronLeft, Users, Target, CheckCircle } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import LogoWatermark from '../components/LogoWatermark';
 import { eventsData } from '../data/events';
 
 export default function EventDetail() {
@@ -78,8 +79,9 @@ export default function EventDetail() {
       </section>
 
       {/* Event Details */}
-      <section className="py-8 lg:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-8 lg:py-12 overflow-hidden">
+        <LogoWatermark />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left - Main Content */}
             <div className="lg:col-span-2 space-y-8">
