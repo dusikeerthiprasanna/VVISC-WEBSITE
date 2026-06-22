@@ -40,9 +40,7 @@ export default function Home() {
             </div>
             
             <h1 className="font-poppins font-bold text-5xl sm:text-6xl lg:text-7xl text-light-text dark:text-dark-text mb-6">
-              <span className="bg-gradient-to-r from-dark-accent to-dark-accent-secondary bg-clip-text text-transparent">
-                VVISC
-              </span>{' '}
+              <span>VVISC</span>{' '}
               Council
             </h1>
             
